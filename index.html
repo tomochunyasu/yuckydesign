@@ -7,11 +7,11 @@
     <meta name="description" content="請求・見積・顧客管理・売上管理をGoogleスプレッドシート×GASでまとめて自動化。5社限定モニター特別価格30,000円（税込）。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Syne:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Syne:wght@700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <style>
         :root {
-            --black: #0A0A0A;
+            --font-price: 'Noto Sans JP', sans-serif;
             --white: #FFFFFF;
             --ink: #111318;
             --ink-soft: #3A3D47;
@@ -152,9 +152,9 @@
             font-size: 1rem; margin-bottom: 0.25rem;
         }
         .price-now {
-            font-family: 'Syne', sans-serif;
-            font-size: 3rem; font-weight: 800; color: var(--accent);
-            letter-spacing: -0.03em; line-height: 1;
+            font-family: var(--font-price);
+            font-size: 3rem; font-weight: 900; color: var(--accent);
+            letter-spacing: -0.02em; line-height: 1;
         }
         .price-now small { font-size: 1.1rem; font-weight: 700; }
         .price-note { font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.5rem; }
@@ -178,10 +178,10 @@
         .label {
             font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em;
             text-transform: uppercase; color: var(--brand);
-            display: block; margin-bottom: 0.5rem; font-family: 'Syne', sans-serif;
+            display: block; margin-bottom: 0.5rem; font-family:Noto Sans JP, 'Syne', sans-serif;
         }
         .title {
-            font-family: 'Syne', sans-serif;
+            font-family: Noto Sans JP, 'Syne', sans-serif;
             font-size: clamp(1.5rem, 3.5vw, 2.2rem);
             font-weight: 800; line-height: 1.3;
             letter-spacing: -0.02em; margin-bottom: 1rem;
@@ -261,7 +261,7 @@
             background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
             border-radius: 14px; padding: 1.75rem 1rem; text-align: center;
         }
-        .result-num { font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--yellow); line-height: 1; }
+        .result-num { font-family: 'Noto Sans JP', sans-serif; font-size: 2.4rem; font-weight: 900; color: var(--yellow); line-height: 1; letter-spacing: -0.02em; }
         .result-unit { font-size: 0.9rem; font-weight: 700; color: white; margin: 0.3rem 0; }
         .result-desc { font-size: 0.8rem; color: rgba(255,255,255,0.7); }
         .results-tagline {
@@ -286,7 +286,7 @@
             width: 44px; height: 44px; flex-shrink: 0;
             background: var(--brand); color: var(--white);
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem;
+            font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 1rem;
             border: 3px solid var(--white);
             box-shadow: 0 0 0 2px var(--brand);
             z-index: 1;
@@ -312,7 +312,7 @@
         }
         .plan-name { text-align: center; font-weight: 700; font-size: 1rem; color: var(--ink-muted); margin-top: 0.5rem; }
         .plan-price { text-align: center; margin: 1.5rem 0 2rem; }
-        .plan-price-main { font-family: 'Syne', sans-serif; font-size: 3.2rem; font-weight: 800; color: var(--ink); line-height: 1; }
+        .plan-price-main { font-family: var(--font-price); font-size: 3.2rem; font-weight: 900; color: var(--ink); line-height: 1; letter-spacing: -0.02em; }
         .plan-price-sub { font-size: 0.85rem; color: var(--ink-muted); margin-top: 0.4rem; }
         .plan-includes { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
         .plan-includes li {
@@ -462,6 +462,68 @@
         .footer-logo span { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.95rem; }
         .copyright { font-size: 0.8rem; color: var(--ink-muted); }
  
+        /* ─── SAMPLE APPS ─── */
+        .sample-section { background: var(--brand-light); }
+        .sample-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem; margin-top: 2.5rem;
+        }
+        .sample-card {
+            background: var(--white); border: 1.5px solid rgba(20,71,230,0.15);
+            border-radius: 16px; overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.22s, box-shadow 0.22s;
+            display: flex; flex-direction: column;
+        }
+        .sample-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-strong); }
+        .sample-thumb {
+            background: linear-gradient(135deg, #1447E6 0%, #0EA5E9 100%);
+            height: 130px; display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; position: relative; overflow: hidden;
+        }
+        .sample-thumb::after {
+            content: ''; position: absolute; inset: 0;
+            background: repeating-linear-gradient(
+                45deg, transparent, transparent 8px,
+                rgba(255,255,255,0.04) 8px, rgba(255,255,255,0.04) 16px
+            );
+        }
+        .sample-thumb.green { background: linear-gradient(135deg, #00875A 0%, #00B050 100%); }
+        .sample-thumb.orange { background: linear-gradient(135deg, #C05200 0%, #FF8800 100%); }
+        .sample-thumb.purple { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); }
+        .sample-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+        .sample-tag {
+            display: inline-block; font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            background: var(--brand-light); color: var(--brand);
+            border: 1px solid rgba(20,71,230,0.2);
+            padding: 3px 10px; border-radius: 999px; margin-bottom: 0.75rem;
+        }
+        .sample-title { font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: 0.5rem; }
+        .sample-desc { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.75; flex: 1; }
+        .sample-note {
+            margin-top: 0.875rem; font-size: 0.78rem; color: var(--ink-muted);
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .sample-note::before { content: '💡'; font-size: 0.85rem; }
+        .sample-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            margin-top: 1rem;
+            font-size: 0.85rem; font-weight: 700; color: var(--brand);
+            border: 1.5px solid rgba(20,71,230,0.3);
+            border-radius: 8px; padding: 8px 14px;
+            background: var(--brand-light);
+            transition: background 0.15s, border-color 0.15s, transform 0.15s;
+            text-decoration: none;
+        }
+        .sample-link:hover { background: rgba(20,71,230,0.12); border-color: var(--brand); transform: translateX(3px); }
+        .sample-footer {
+            margin-top: 2.5rem; text-align: center;
+            background: var(--white); border: 1.5px solid rgba(20,71,230,0.2);
+            border-radius: 14px; padding: 1.75rem 2rem;
+        }
+        .sample-footer p { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 1.25rem; line-height: 1.8; }
+ 
         /* ─── RESPONSIVE ─── */
  
         /* タブレット */
@@ -554,7 +616,11 @@
             .btn-cta { padding: 15px 24px; font-size: 1rem; width: 100%; justify-content: center; box-shadow: none; }
             .cta-note { font-size: 0.75rem; line-height: 1.7; }
  
-            /* Form */
+            /* Sample */
+            .sample-grid { grid-template-columns: 1fr; gap: 0.875rem; }
+            .sample-thumb { height: 100px; font-size: 2.4rem; }
+            .sample-body { padding: 1.25rem; }
+            .sample-footer { padding: 1.25rem 1rem; }
             .form-card { padding: 1.5rem 1.125rem; }
             input, select, textarea { font-size: 16px; /* iOSのズーム防止 */ }
             .btn-submit { font-size: 1rem; padding: 15px; box-shadow: 3px 3px 0 var(--ink); }
@@ -592,8 +658,8 @@
     <div class="hero-inner">
         <div class="hero-badge reveal">スプレッドシート × GAS 業務自動化</div>
         <h1 class="hero-hook reveal d1">
-            あなたの業務に合わせて<br>
-            <span class="red underline-wavy">“ゼロから設計”します</span>
+            社長、まだそれ<br>
+            <span class="red underline-wavy">手作業でやりますか？</span>
         </h1>
         <p class="hero-lead reveal d2">
             請求・見積・顧客管理・売上管理まで<br>
@@ -676,6 +742,88 @@
     </div>
 </section>
  
+<!-- SAMPLE APPS -->
+<section class="section sample-section">
+    <div class="section-inner">
+        <span class="label reveal" style="text-align:center; display:block;">Sample</span>
+        <h2 class="title reveal d1" style="text-align:center;">こんなものが作れます</h2>
+        <p class="subtitle reveal d2" style="text-align:center; max-width:560px; margin:0 auto;">
+            実際に納品したツールの一例です。業種・業務に合わせてカスタマイズします。
+        </p>
+        <div class="sample-grid">
+            <div class="sample-card reveal d1">
+                <div class="sample-thumb">📄</div>
+                <div class="sample-body">
+                    <span class="sample-tag">請求・見積</span>
+                    <div class="sample-title">ワンクリック請求書発行システム</div>
+                    <div class="sample-desc">顧客を選んでボタンを押すだけ。請求書PDFが自動生成され、入金管理まで一元化。</div>
+                    <div class="sample-note">フリーランス・小規模事業者に人気</div>
+                    <a href="#" class="sample-link" target="_blank" rel="noopener">
+                        <span>サンプルアプリを試してみる</span> →
+                    </a>
+                </div>
+            </div>
+            <div class="sample-card reveal d2">
+                <div class="sample-thumb green">📦</div>
+                <div class="sample-body">
+                    <span class="sample-tag">在庫管理</span>
+                    <div class="sample-title">在庫・発注自動管理ツール</div>
+                    <div class="sample-desc">在庫数をリアルタイム更新。設定した閾値を下回ると自動でアラート通知。発注ミスをゼロに。</div>
+                    <div class="sample-note">小売・製造業に対応</div>
+                    <a href="#" class="sample-link" target="_blank" rel="noopener">
+                        <span>サンプルアプリを試してみる</span> →
+                    </a>
+                </div>
+            </div>
+            <div class="sample-card reveal d3">
+                <div class="sample-thumb orange">🚗</div>
+                <div class="sample-body">
+                    <span class="sample-tag">車両・設備</span>
+                    <div class="sample-title">車両・部品管理システム</div>
+                    <div class="sample-desc">車両ごとの整備履歴・部品交換記録を一元管理。次回点検日の自動リマインドにも対応。</div>
+                    <div class="sample-note">運送・整備・建設業向け</div>
+                    <a href="#" class="sample-link" target="_blank" rel="noopener">
+                        <span>サンプルアプリを試してみる</span> →
+                    </a>
+                </div>
+            </div>
+            <div class="sample-card reveal d1">
+                <div class="sample-thumb purple">👥</div>
+                <div class="sample-body">
+                    <span class="sample-tag">顧客管理</span>
+                    <div class="sample-title">シンプルCRM（顧客管理）</div>
+                    <div class="sample-desc">顧客情報・商談履歴・次回アクションを一画面で管理。高額なSFAは不要な方に。</div>
+                    <div class="sample-note">士業・コンサル・サービス業に最適</div>
+                    <a href="#" class="sample-link" target="_blank" rel="noopener">
+                        <span>サンプルアプリを試してみる</span> →
+                    </a>
+                </div>
+            </div>
+            <div class="sample-card reveal d2">
+                <div class="sample-thumb green">📊</div>
+                <div class="sample-body">
+                    <span class="sample-tag">経営ダッシュボード</span>
+                    <div class="sample-title">売上・KPI 自動集計ダッシュボード</div>
+                    <div class="sample-desc">月次売上・顧客別推移・粗利をリアルタイム可視化。経営判断に必要な数字が即わかる。</div>
+                    <div class="sample-note">経営者・管理職の意思決定をサポート</div>
+                    <a href="#" class="sample-link" target="_blank" rel="noopener">
+                        <span>サンプルアプリを試してみる</span> →
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sample-footer reveal">
+            <p>
+                上記はあくまで一例です。<strong>あなたの業種・業務フローに合わせて</strong>、<br>
+                必要なものをヒアリングしながら一緒に設計します。
+            </p>
+            <a href="#contact" class="btn-hero" style="display:inline-flex;" onclick="scrollTo('contact')">
+                👉 どんなものが作れるか相談してみる
+            </a>
+        </div>
+    </div>
+</section>
+ 
 <!-- EXPANSION -->
 <section class="section expand-section">
     <div class="section-inner">
@@ -690,9 +838,8 @@
             <div class="expand-item reveal d3"><span class="expand-item-icon">📦</span><span class="expand-item-text">在庫管理</span></div>
             <div class="expand-item reveal d1"><span class="expand-item-icon">🚗</span><span class="expand-item-text">車両・部品管理</span></div>
             <div class="expand-item reveal d2"><span class="expand-item-icon">📩</span><span class="expand-item-text">メール自動送信</span></div>
-            <div class="expand-item reveal d3"><span class="expand-item-icon">🔔</span><span class="expand-item-text">LINE通知連携</span></div>
-            <div class="expand-item reveal d1"><span class="expand-item-icon">📁</span><span class="expand-item-text">CSV自動処理</span></div>
-            <div class="expand-item reveal d2"><span class="expand-item-icon">⚙️</span><span class="expand-item-text">業務全体の一元化</span></div>
+            <div class="expand-item reveal d3"><span class="expand-item-icon">📁</span><span class="expand-item-text">CSV自動処理</span></div>
+            <div class="expand-item reveal d1"><span class="expand-item-icon">⚙️</span><span class="expand-item-text">業務全体の一元化</span></div>
         </div>
     </div>
 </section>
@@ -738,7 +885,7 @@
                 <div class="flow-num">③</div>
                 <div class="flow-body">
                     <h3>業務全体を一元管理</h3>
-                    <p>在庫・車両・メール・LINE通知まで。あなたの業務に必要なものを段階的に自動化します。</p>
+                    <p>在庫・車両・メール送信まで。あなたの業務に必要なものを段階的に自動化します。</p>
                 </div>
             </div>
         </div>
