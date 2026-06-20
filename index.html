@@ -462,6 +462,9 @@
         .footer-logo img { height: 26px; border-radius: 4px; }
         .footer-logo span { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.95rem; }
         .copyright { font-size: 0.8rem; color: var(--ink-muted); }
+        .footer-links { margin-top: 0.75rem; display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
+        .footer-links a { font-size: 0.8rem; color: var(--ink-muted); text-decoration: underline; }
+        .footer-links a:hover { color: var(--brand); }
  
         /* ─── SAMPLE APPS ─── */
         .sample-section { background: var(--brand-light); }
@@ -518,6 +521,13 @@
             text-decoration: none;
         }
         .sample-link:hover { background: rgba(20,71,230,0.12); border-color: var(--brand); transform: translateX(3px); }
+        .sample-link.sample-link-disabled {
+            color: var(--ink-muted);
+            border-color: var(--border-strong);
+            background: #F0F0EC;
+            cursor: default;
+        }
+        .sample-link.sample-link-disabled:hover { transform: none; background: #F0F0EC; border-color: var(--border-strong); }
         .sample-footer {
             margin-top: 2.5rem; text-align: center;
             background: var(--white); border: 1.5px solid rgba(20,71,230,0.2);
@@ -613,7 +623,7 @@
             <img src="https://static.wixstatic.com/media/b75929_34206d9363c7447b88c5d130d32bb39a~mv2.jpg" alt="Yucky Design ロゴ">
             <span>Yucky Design</span>
         </a>
-        <div class="header-pill">⏰ 残り5社限定</div>
+        <div class="header-pill">⏰ モニター募集中</div>
     </div>
 </header>
  
@@ -639,7 +649,7 @@
         <div class="hero-price-wrap reveal d3">
             <div class="price-before">通常価格 100,000円〜</div>
             <div class="price-now"><small>¥</small>30,000<small>（税込）</small></div>
-            <div class="price-note">🎉 モニター特別価格 ｜ 5社限定</div>
+            <div class="price-note">🎉 モニター特別価格 ｜ 先着5社限定</div>
         </div>
         <div class="reveal d4">
             <a href="#contact" class="btn-hero">
@@ -751,8 +761,8 @@
                     <div class="sample-title">車両・部品管理システム</div>
                     <div class="sample-desc">車両ごとの整備履歴・部品交換記録を一元管理。次回点検日の自動リマインドにも対応。</div>
                     <div class="sample-note">運送・整備・建設業向け</div>
-                    <a href="#contact" class="sample-link">
-                        <span>サンプルアプリを試してみる</span> →
+                    <a href="#contact" class="sample-link sample-link-disabled">
+                        <span>サンプル準備中・詳細はお問い合わせください</span> →
                     </a>
                 </div>
             </div>
@@ -763,8 +773,8 @@
                     <div class="sample-title">シンプルCRM（顧客管理）</div>
                     <div class="sample-desc">顧客情報・商談履歴・次回アクションを一画面で管理。高額なSFAは不要な方に。</div>
                     <div class="sample-note">士業・コンサル・サービス業に最適</div>
-                    <a href="#contact" class="sample-link">
-                        <span>サンプルアプリを試してみる</span> →
+                    <a href="#contact" class="sample-link sample-link-disabled">
+                        <span>サンプル準備中・詳細はお問い合わせください</span> →
                     </a>
                 </div>
             </div>
@@ -775,8 +785,8 @@
                     <div class="sample-title">売上・KPI 自動集計ダッシュボード</div>
                     <div class="sample-desc">月次売上・顧客別推移・粗利をリアルタイム可視化。経営判断に必要な数字が即わかる。</div>
                     <div class="sample-note">経営者・管理職の意思決定をサポート</div>
-                    <a href="#contact" class="sample-link">
-                        <span>サンプルアプリを試してみる</span> →
+                    <a href="#contact" class="sample-link sample-link-disabled">
+                        <span>サンプル準備中・詳細はお問い合わせください</span> →
                     </a>
                 </div>
             </div>
@@ -865,7 +875,7 @@
 <section class="section" style="background:#F5F5F0;">
     <div class="section-inner">
         <span class="label reveal" style="text-align:center; display:block;">Monitor Plan</span>
-        <h2 class="title reveal d1" style="text-align:center;">5社限定 モニタープラン</h2>
+        <h2 class="title reveal d1" style="text-align:center;">先着5社限定 モニタープラン</h2>
         <p class="subtitle reveal d2" style="text-align:center; max-width:560px; margin:0 auto;">
             本格展開前に実績データを集めるための特別募集です。<br>
             そのため、通常より大幅に抑えた特別価格でご提供します。
@@ -889,18 +899,11 @@
                     <li>使い方サポートつき</li>
                 </ul>
                 <hr class="plan-divider">
-                <div class="seats-bar">
-                    <div class="seat">残5</div>
-                    <div class="seat">残4</div>
-                    <div class="seat">残3</div>
-                    <div class="seat">残2</div>
-                    <div class="seat">残1</div>
-                </div>
-                <p class="seats-note" style="margin-bottom:1.5rem;">現在：5社 募集中（枠が埋まり次第終了）</p>
+                <p class="seats-note" style="margin-bottom:1.5rem;">先着5社限定でのご案内です（枠が埋まり次第、募集終了）</p>
                 <div class="plan-conditions">
                     <h4>■ モニター募集条件</h4>
                     <ul>
-                        <li>実績掲載必須（社名非公開OK・顔出し不要）</li>
+                        <li>実績掲載にご協力いただける方を優先（社名非公開・顔出し不要も可）</li>
                         <li>導入後アンケート回答のご協力</li>
                         <li>追加機能・カスタマイズは別途お見積もり</li>
                         <li>Google スプレッドシートを使用できる環境が必要</li>
@@ -1057,6 +1060,10 @@
             <span>Yucky Design</span>
         </a>
         <p class="copyright">&copy; <span id="year"></span> Yucky Design. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="tokushoho.html">特定商取引法に基づく表記</a>
+            <a href="#contact">お問い合わせ</a>
+        </div>
     </div>
 </footer>
  
@@ -1106,7 +1113,7 @@
     }
  
     // ============================================================
-    // フォーム送信（GAS Webアプリへ no-cors fetch）
+    // フォーム送信（GAS Webアプリへ fetch / レスポンスを判定）
     // ============================================================
     async function handleSubmit(e) {
         e.preventDefault();
@@ -1138,26 +1145,40 @@
         btn.innerHTML = '⏳ 送信中...';
  
         try {
-            // no-cors: GASはCORSヘッダーを返せないためopaque responseになるが
-            // データはGAS側に届いてスプレッドシート保存・メール送信は正常に動く
-            await fetch(GAS_URL, {
+            // 注意: Content-Type を "text/plain" にしてプリフライト(OPTIONS)を回避しています。
+            // GAS Web App はブラウザからの application/json プリフライトに正しく応答できないことがあるため。
+            // e.postData.contents 側はテキストとして届くので、GAS側の JSON.parse はそのまま機能します。
+            const res = await fetch(GAS_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                 body: JSON.stringify(form),
-                mode: 'no-cors'
+                mode: 'cors'
             });
- 
-            // no-corsではレスポンスの中身が読めないので送信成功とみなす
+
+            if (!res.ok) {
+                throw new Error('HTTP ' + res.status);
+            }
+
+            const data = await res.json();
+
             btn.disabled = false;
             btn.innerHTML = orig;
-            statusEl.textContent = '✅ 送信完了！24時間以内にご返信いたします。';
-            statusEl.classList.add('ok');
-            document.getElementById('contactForm').reset();
- 
+
+            if (data && data.success) {
+                statusEl.textContent = '✅ 送信完了！24時間以内にご返信いたします。';
+                statusEl.classList.add('ok');
+                document.getElementById('contactForm').reset();
+            } else {
+                // GAS側で success: false が返ってきた場合（書き込み・送信エラーなど）
+                statusEl.innerHTML = (data && data.message ? data.message : '送信中にエラーが発生しました。') +
+                    '<br>お手数ですが、下記メールアドレスへ直接ご連絡いただくか、時間をおいて再度お試しください。';
+                statusEl.classList.add('ng');
+            }
+
         } catch (err) {
             btn.disabled = false;
             btn.innerHTML = orig;
-            statusEl.textContent = '通信エラーが発生しました。ネットワーク環境をご確認ください。';
+            statusEl.innerHTML = '通信エラーが発生しました。お手数ですが、ネットワーク環境をご確認のうえ再度お試しいただくか、下記メールアドレスへ直接ご連絡ください。';
             statusEl.classList.add('ng');
             console.error(err);
         }
