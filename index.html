@@ -80,6 +80,16 @@
             0%,100% { box-shadow: 0 0 0 0 rgba(255,59,47,.5); }
             50% { box-shadow: 0 0 0 8px rgba(255,59,47,0); }
         }
+        .header-right { display: flex; align-items: center; gap: 12px; }
+        .header-insta {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 34px; height: 34px; border-radius: 50%;
+            border: 1.5px solid var(--border-strong);
+            color: var(--ink); transition: background 0.15s, border-color 0.15s, transform 0.15s;
+            flex-shrink: 0;
+        }
+        .header-insta:hover { background: var(--brand-light); border-color: var(--brand); transform: translateY(-1px); }
+        .header-insta svg { width: 18px; height: 18px; }
  
         /* ─── ALERT BAR ─── */
         .alert-bar {
@@ -465,6 +475,15 @@
         .footer-links { margin-top: 0.75rem; display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
         .footer-links a { font-size: 0.8rem; color: var(--ink-muted); text-decoration: underline; }
         .footer-links a:hover { color: var(--brand); }
+        .footer-social {
+            display: inline-flex; align-items: center; gap: 6px;
+            margin-top: 1rem; font-size: 0.85rem; font-weight: 700;
+            color: var(--ink-soft); border: 1.5px solid var(--border-strong);
+            border-radius: 999px; padding: 6px 16px;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .footer-social:hover { background: var(--brand-light); border-color: var(--brand); color: var(--brand); }
+        .footer-social svg { width: 16px; height: 16px; }
  
         /* ─── SAMPLE APPS ─── */
         .sample-section { background: var(--brand-light); }
@@ -547,6 +566,9 @@
             .header-inner { padding: 10px 16px; }
             .logo img { height: 28px; }
             .logo span { font-size: 0.9rem; }
+            .header-right { gap: 8px; }
+            .header-insta { width: 30px; height: 30px; }
+            .header-insta svg { width: 16px; height: 16px; }
             .header-pill { font-size: 0.7rem; padding: 4px 10px; }
             .alert-bar { font-size: 0.8rem; padding: 9px 14px; line-height: 1.6; }
             .hero { padding: 52px 16px 64px; }
@@ -623,7 +645,16 @@
             <img src="https://static.wixstatic.com/media/b75929_34206d9363c7447b88c5d130d32bb39a~mv2.jpg" alt="Yucky Design ロゴ">
             <span>Yucky Design</span>
         </a>
-        <div class="header-pill">⏰ モニター募集中</div>
+        <div class="header-right">
+            <a class="header-insta" href="https://www.instagram.com/202408yucky_design/" target="_blank" rel="noopener" aria-label="Instagramを見る">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <div class="header-pill">⏰ モニター募集中</div>
+        </div>
     </div>
 </header>
  
@@ -1072,6 +1103,14 @@
             <a href="tokushoho.html">特定商取引法に基づく表記</a>
             <a href="#contact">お問い合わせ</a>
         </div>
+        <a class="footer-social" href="https://www.instagram.com/202408yucky_design/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            Instagram
+        </a>
     </div>
 </footer>
  
