@@ -268,6 +268,44 @@
             .works-body { padding: 1rem 1.25rem; }
         }
 
+        /* ─── VOICE ─── */
+        .voice-section { background: #F5F5F0; }
+        .voice-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem; margin-top: 2.5rem;
+        }
+        .voice-card {
+            background: var(--white); border: 1.5px solid var(--border);
+            border-radius: 16px; padding: 1.75rem;
+            box-shadow: var(--shadow-card);
+            position: relative;
+        }
+        .voice-quote {
+            font-size: 3rem; line-height: 1; color: var(--brand);
+            opacity: 0.15; position: absolute; top: 1rem; left: 1.25rem;
+            font-family: Georgia, serif;
+        }
+        .voice-text {
+            font-size: 0.95rem; color: var(--ink-soft); line-height: 1.85;
+            padding-top: 1.5rem; margin-bottom: 1.25rem;
+        }
+        .voice-author {
+            display: flex; align-items: center; gap: 0.75rem;
+            border-top: 1px solid var(--border); padding-top: 1rem;
+        }
+        .voice-avatar {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: var(--brand-light); border: 2px solid rgba(20,71,230,0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0;
+        }
+        .voice-name { font-weight: 700; font-size: 0.88rem; color: var(--ink); }
+        .voice-meta { font-size: 0.78rem; color: var(--ink-muted); }
+        .voice-stars { color: #F59E0B; font-size: 0.85rem; margin-bottom: 0.2rem; }
+        @media (max-width: 640px) {
+            .voice-grid { grid-template-columns: 1fr; gap: 1rem; }
+        }
+
         /* ─── EXPANSION ─── */
         .expand-section { background: var(--ink); color: var(--white); }
         .expand-section .label { color: var(--yellow); }
@@ -907,6 +945,47 @@
         </div>
     </div>
 </section>
+<!-- VOICE -->
+<section class="section voice-section">
+    <div class="section-inner">
+        <span class="label reveal" style="text-align:center; display:block;">Voice</span>
+        <h2 class="title reveal d1" style="text-align:center;">お客様の声</h2>
+        <p class="subtitle reveal d2" style="text-align:center; max-width:560px; margin:0 auto;">
+            実際にご利用いただいたお客様からのご感想です。
+        </p>
+        <div class="voice-grid">
+            <!-- ▼ 声1 ▼ -->
+            <div class="voice-card reveal d1">
+                <div class="voice-quote">"</div>
+                <div class="voice-stars">★★★★★</div>
+                <div class="voice-text">
+                    毎回Excelデータをコピー＆ペーストしてインボイスを作成していましたが、このアプリを導入してからは作業時間が約半分に短縮されました。
+
+以前は書類の締切が迫るたびに残業して対応していましたが、現在では短時間で正確にインボイスを作成できるようになり、業務の負担が大幅に軽減されています。
+
+入力ミスも減り、安心して日々の業務を進められるようになりました。
+
+                </div>
+                <div class="voice-author">
+                    <div class="voice-avatar">👤</div>
+                    <div>
+                        <div class="voice-name">A様</div>
+                        <div class="voice-meta"></div>
+                    </div>
+                </div>
+            </div>
+            >
+                
+                </div>
+            </div>
+           
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+</section>    
 
 <!-- EXPANSION -->
 <section class="section expand-section">
