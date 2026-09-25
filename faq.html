@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>よくある質問｜料金・納期・サポート｜Yucky Design</title>
+<meta name="description" content="業務自動化のよくある質問。料金（モニタープラン30,000円）、納期3～4週間、お支払い方法、データの安全性、納品後のサポート、モニターの条件などをまとめました。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tomochunyasu.github.io/yuckydesign/faq.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<style>
+    :root{
+        --white:#FFFFFF;
+        --ink:#111318;
+        --ink-soft:#3A3D47;
+        --ink-muted:#6B7280;
+        --accent:#FF3B2F;
+        --accent-2:#FF8800;
+        --brand:#1447E6;
+        --brand-light:#EEF3FF;
+        --border:rgba(0,0,0,0.1);
+        --border-strong:rgba(0,0,0,0.2);
+        --shadow-card:0 2px 16px rgba(0,0,0,0.08);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{
+        font-family:'Noto Sans JP','BIZ UDPGothic',sans-serif;
+        background:var(--white);
+        color:var(--ink);
+        line-height:1.85;
+        font-size:16px;
+        -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--brand);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    img{max-width:100%;height:auto;display:block;}
+
+    /* ---------- 下書きの案内帯 ---------- */
+    .draft-note{
+        background:#FFF7DC;
+        border-bottom:1px dashed #E0A800;
+        color:#7A5B00;
+        font-size:14px;
+        line-height:1.7;
+        padding:12px 20px;
+    }
+    .draft-note strong{font-weight:700;}
+
+    /* ---------- ヘッダー ---------- */
+    .site-header{
+        border-bottom:1px solid var(--border);
+        background:rgba(255,255,255,0.92);
+        position:sticky;
+        top:0;
+        z-index:10;
+        backdrop-filter:blur(8px);
+    }
+    .header-inner{
+        max-width:900px;
+        margin:0 auto;
+        padding:12px 20px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:12px;
+    }
+    .logo{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;}
+    .logo img{width:32px;height:32px;border-radius:50%;object-fit:cover;}
+    .logo span{font-weight:900;font-size:16px;letter-spacing:0.01em;}
+    .header-right{display:flex;align-items:center;gap:10px;}
+    .header-insta{color:var(--ink-soft);display:inline-flex;align-items:center;}
+    .header-insta svg{width:22px;height:22px;}
+    .header-pill{
+        background:var(--accent);
+        color:#fff;
+        font-size:12px;
+        font-weight:700;
+        padding:4px 10px;
+        border-radius:999px;
+        white-space:nowrap;
+    }
+
+    /* ---------- レイアウト ---------- */
+    .container{max-width:900px;margin:0 auto;padding:0 20px;}
+    main{padding:32px 0 64px;}
+    .back-link{font-size:14px;color:var(--ink-muted);display:inline-block;margin-bottom:24px;}
+    .label{
+        display:inline-block;
+        color:var(--brand);
+        font-size:12px;
+        font-weight:700;
+        letter-spacing:0.14em;
+        text-transform:uppercase;
+        margin-bottom:10px;
+    }
+    h1{
+        font-size:clamp(24px,4.6vw,34px);
+        line-height:1.45;
+        font-weight:900;
+        letter-spacing:-0.01em;
+        margin-bottom:18px;
+    }
+    h2{
+        font-size:clamp(19px,3.2vw,23px);
+        line-height:1.5;
+        font-weight:900;
+        margin-bottom:16px;
+        padding-bottom:10px;
+        border-bottom:2px solid var(--brand);
+        display:inline-block;
+    }
+    h3{font-size:17px;font-weight:700;margin:24px 0 8px;}
+    p{margin-bottom:14px;color:var(--ink-soft);}
+    section{padding:44px 0;border-bottom:1px solid var(--border);}
+    section:last-of-type{border-bottom:none;}
+    .lead{font-size:17px;color:var(--ink);font-weight:500;}
+    ul{margin:0 0 14px 1.2em;color:var(--ink-soft);}
+    li{margin-bottom:6px;}
+
+    /* ---------- カード ---------- */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:22px;}
+    .card{
+        border:1px solid var(--border);
+        border-radius:14px;
+        padding:22px 20px;
+        box-shadow:var(--shadow-card);
+        background:#fff;
+    }
+    .card h3{margin-top:0;font-size:17px;}
+    .card p{font-size:14.5px;margin-bottom:12px;}
+    .card .demo-link{font-size:14px;font-weight:700;}
+
+    /* ---------- 表 ---------- */
+    .info-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:15px;}
+    .info-table th,.info-table td{
+        border:1px solid var(--border);
+        padding:12px 14px;
+        text-align:left;
+        vertical-align:top;
+    }
+    .info-table th{
+        background:#F7F8FA;
+        width:32%;
+        font-weight:700;
+        color:var(--ink);
+        white-space:nowrap;
+    }
+    .info-table td{color:var(--ink-soft);}
+
+    /* ---------- 記入待ち ---------- */
+    .fill-note{
+        background:#FFF7DC;
+        border:1px dashed #E0A800;
+        border-radius:8px;
+        padding:12px 16px;
+        color:#7A5B00;
+        font-size:14.5px;
+        margin:8px 0 16px;
+    }
+
+    /* ---------- CTA ---------- */
+    .cta-box{
+        background:var(--brand-light);
+        border-radius:16px;
+        padding:32px 24px;
+        text-align:center;
+    }
+    .cta-box h2{border-bottom:none;padding-bottom:0;}
+    .cta-box p{color:var(--ink-soft);}
+    .btn-cta{
+        display:inline-block;
+        background:var(--accent);
+        color:#fff;
+        font-weight:700;
+        font-size:16px;
+        padding:15px 30px;
+        border-radius:999px;
+        margin-top:8px;
+        box-shadow:0 6px 20px rgba(255,59,47,0.28);
+    }
+    .btn-cta:hover{text-decoration:none;opacity:0.92;}
+    .cta-note{font-size:13px;color:var(--ink-muted);margin-top:14px;}
+
+    /* ---------- フッター ---------- */
+    .footer{
+        border-top:1px solid var(--border);
+        padding:36px 20px 48px;
+        text-align:center;
+        font-size:14px;
+        color:var(--ink-muted);
+    }
+    .footer-logo{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-weight:900;margin-bottom:14px;}
+    .footer-logo img{width:28px;height:28px;border-radius:50%;object-fit:cover;}
+    .footer-links{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin:14px 0;}
+    .footer-links a{font-size:14px;}
+    .copyright{font-size:12.5px;}
+    @media (max-width:600px){
+        .info-table th{width:38%;white-space:normal;}
+        section{padding:34px 0;}
+    }
+        .header-links { display: flex; align-items: center; gap: 14px; }
+        .header-links a { font-size: 13.5px; font-weight: 700; color: var(--brand); text-decoration: none; white-space: nowrap; }
+        .header-links a:hover { text-decoration: underline; }
+        @media (max-width: 640px){ .header-links { display: none; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a class="logo" href="index.html">
+            <img src="https://static.wixstatic.com/media/b75929_34206d9363c7447b88c5d130d32bb39a~mv2.jpg" alt="Yucky Design ロゴ">
+            <span>Yucky Design</span>
+        </a>
+        <div class="header-right">
+            <div class="header-links">
+                <a href="price.html">料金</a>
+                <a href="faq.html">よくある質問</a>
+                <a href="about.html">運営者情報</a>
+            </div>
+            <a class="header-insta" href="https://www.instagram.com/202408yucky_design/" target="_blank" rel="noopener" aria-label="Instagramを見る">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <div class="header-pill">⏰ モニター募集中</div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <a class="back-link" href="index.html">← トップページに戻る</a>
+
+    <section style="padding-top:8px;">
+        <span class="label">FAQ</span>
+        <h1>よくある質問</h1>
+        <p class="lead">
+            モニタープラン・料金・納期・納品後のサポートについて、よくいただく質問をまとめました。
+        </p>
+        <p>
+            ここに載っていない内容でも、<a href="index.html#contact">お問い合わせ</a>からお気軽にご質問ください。
+            「これも自動化できる？」という段階のご相談で構いません。
+        </p>
+    </section>
+    <section>
+        <h2>サービスについて</h2>
+        <h3>Q. どんな業務を自動化できますか？</h3>
+        <p>A. 請求書・見積書の発行と管理、在庫・発注の管理、車両・部品の管理、顧客管理、売上やKPIの集計などです。GoogleスプレッドシートとGASで作るため、表計算ソフトで行っている集計・転記・帳票作成のほとんどが対象になります。</p>
+        <h3>Q. ITに詳しくなくても大丈夫ですか？</h3>
+        <p>A. 問題ありません。スプレッドシートの基本操作ができれば使えるように設計します。使い方のサポートもしっかり行います。</p>
+        <h3>Q. 小さな会社でも依頼できますか？</h3>
+        <p>A. はい。まずは効果の大きい作業から順にご提案するので、担当者の少ない会社でも始めやすいです。</p>
+        <h3>Q. 現在使っているスプレッドシートやExcelはそのまま使えますか？</h3>
+        <p>A. 既存のシートを土台にすることも可能です。ヒアリングの中で現状の運用フローを確認し、最適な形を一緒に設計します。</p>
+        <h3>Q. 自社の仕様に合わせてもらえますか？</h3>
+        <p>A. 可能な範囲でカスタマイズいたします。まずはヒアリングの上、どこまで対応できるかご提案します。追加の機能開発は別途お見積もりとなります。</p>
+        <h3>Q. どんな業種に対応していますか？</h3>
+        <p>A. 小売・製造・運送・整備・建設・士業など、事務作業のある業種全般に対応しています。輸出・貿易の書類作成のように、特定の業務に合わせた設計も行っています。</p>
+    </section>
+
+    <section>
+        <h2>料金・お支払いについて</h2>
+        <h3>Q. 料金はいくらですか？</h3>
+        <p>A. いまは実績づくりを兼ねたモニタープランとして、先着5社限定で30,000円（税込・固定）で承っています。請求・見積の自動化パッケージが対象です。モニター枠が埋まったあとは、業務内容に応じた個別のお見積りになります。くわしくは料金・プランページをご確認ください。</p>
+        <h3>Q. 追加で費用がかかることはありますか？</h3>
+        <p>A. 納品後の追加カスタマイズ・機能追加、外部サービスとの連携、月額の保守サポートは別途お見積りです。後から追加費用が発生する場合は、必ず事前にご相談してから進めます。</p>
+        <h3>Q. お支払いの方法とタイミングを教えてください。</h3>
+        <p>A. 銀行振込で、納品完了後、請求書発行日より7日以内にお願いしています。</p>
+        <h3>Q. 途中でキャンセルできますか？</h3>
+        <p>A. 制作・設定作業の着手後は、進捗状況に応じて発生した費用を差し引いた金額を返金いたします。既に納品済みの成果物および提供済みのサービスに関する料金は返金いたしかねます。</p>
+        <h3>Q. 見積もりだけでも大丈夫ですか？</h3>
+        <p>A. はい。「この作業ならいくらくらい？」というご質問だけでもお答えします。お見積りの前のご相談・ヒアリングは無料です。</p>
+    </section>
+
+    <section>
+        <h2>進め方・納期について</h2>
+        <h3>Q. 納期はどれくらいですか？</h3>
+        <p>A. お申し込みとヒアリングの完了後、おおむね3～4週間です。内容によって前後する場合は、着手前にお伝えします。</p>
+        <h3>Q. 何を用意すればいいですか？</h3>
+        <p>A. Googleアカウント（GoogleスプレッドシートとGASが使える状態）と、いま使っているファイルや帳票があれば十分です。業務の流れはヒアリングで伺います。</p>
+        <h3>Q. 依頼から納品までの流れを教えてください。</h3>
+        <p>A. １．無料相談、２．ヒアリング、３．お見積り（作業範囲・金額・スケジュール）、４．ご契約・着手、５．納品と操作説明、という順番です。開発に入る前に完成イメージをすり合わせます。</p>
+        <h3>Q. 途中で仕様を変えられますか？</h3>
+        <p>A. 開発に入る前に完成イメージをすり合わせます。着手後の追加や変更は、内容によって別途お見積りになる場合があります。</p>
+    </section>
+
+    <section>
+        <h2>技術・運用について</h2>
+        <h3>Q. データの安全性は大丈夫ですか？</h3>
+        <p>A. Googleのセキュアな環境（スプレッドシート・GAS）内で完結するため、外部サーバーへのデータ送信はありません。アクセス権限もお客様自身で管理できます。</p>
+        <h3>Q. 納品後のサポートはありますか？</h3>
+        <p>A. 使い方のサポートを含みます。納品後の追加改修・機能追加については別途ご相談ください。</p>
+        <h3>Q. 会計ソフトなど他のシステムと連携できますか？</h3>
+        <p>A. 連携は内容により個別にお見積りします。まずは現在お使いのサービスを教えてください。</p>
+        <h3>Q. 専用のアプリをインストールする必要がありますか？</h3>
+        <p>A. 不要です。Googleアカウントがあれば、ブラウザからそのまま使えます。</p>
+    </section>
+
+    <section>
+        <h2>モニタープランについて</h2>
+        <h3>Q. モニタープランとは何ですか？</h3>
+        <p>A. 本格展開の前に実績データを集めるための特別募集です。実績づくりを兼ねているため、通常より大幅に押えた30,000円（税込・固定）で承っています。先着5社限定です。</p>
+        <h3>Q. なぜこの価格なのですか？</h3>
+        <p>A. Yucky Design として外部のお客様に納品した実績が、これから積み上げていく段階だからです。その代わり、通常より低い価格で承っています。できること・できないことは正直にお伝えします。</p>
+        <h3>Q. モニターの条件はありますか？</h3>
+        <p>A. 導入後に「どの作業がどれくらい楽になったか」を伺い、事例としてまとめさせていただくことを想定しています。実績掲載にご協力いただける方を優先しますが、社名非公開・顔出し不要でも構いません。掲載の可否は必ずご確認いただいたうえで決めます。</p>
+        <h3>Q. 枠が埋まったらどうなりますか？</h3>
+        <p>A. 先着5社の枠が埋まり次第、この特別価格でのご案内は終了します。それ以降のご依頼は、業務内容・規模に応じた個別お見積りとなります。</p>
+    </section>
+
+    <section style="border-bottom:none;">
+        <div class="cta-box">
+            <h2>解決しないことは、直接聞いてください</h2>
+            <p>業務の流れが固まっていなくても大丈夫です。<br>無料のご相請は1分で送れます。</p>
+            <a class="btn-cta" href="index.html#contact">👉 無料で相請してみる（1分でOK）</a>
+            <p class="cta-note">相請は無料 丨 無理な営業はしません 丨 モニタープランは先着5社限定</p>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="footer-logo">
+        <img src="https://static.wixstatic.com/media/b75929_34206d9363c7447b88c5d130d32bb39a~mv2.jpg" alt="Yucky Design">
+        <span>Yucky Design</span>
+    </a>
+    <div class="footer-links">
+        <a href="price.html">料金・プラン</a>
+        <a href="about.html">運営者情報</a>
+        <a href="tokushoho.html">特定商取引法に基づく表記</a>
+        <a href="index.html#contact">お問い合わせ</a>
+        <a href="https://www.instagram.com/202408yucky_design/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="copyright">&copy; <span id="year">2026</span> Yucky Design. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Yucky Design",
+  "url": "https://tomochunyasu.github.io/yuckydesign/",
+  "email": "tomochunyasu@gmail.com",
+  "description": "Google スプレッドシート×GAS による業務自動化システムの設計・構築。請求・見積、在庫・発注、車両・部品管理の手作業を自動化します。",
+  "sameAs": [
+    "https://www.instagram.com/202408yucky_design/"
+  ],
+  "knowsAbout": [
+    "業務自動化",
+    "Google スプレッドシート",
+    "Google Apps Script",
+    "請求書の自動化",
+    "在庫管理",
+    "車両管理"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "どんな業務を自動化できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "請求書・見積書の発行と管理、在庫・発注の管理、車両・部品の管理、顧客管理、売上やKPIの集計などです。GoogleスプレッドシートとGASで作るため、表計算ソフトで行っている集計・転記・帳票作成のほとんどが対象になります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ITに詳しくなくても大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "問題ありません。スプレッドシートの基本操作ができれば使えるように設計します。使い方のサポートもしっかり行います。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "小さな会社でも依頼できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。まずは効果の大きい作業から順にご提案するので、担当者の少ない会社でも始めやすいです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "現在使っているスプレッドシートやExcelはそのまま使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "既存のシートを土台にすることも可能です。ヒアリングの中で現状の運用フローを確認し、最適な形を一緒に設計します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "自社の仕様に合わせてもらえますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可能な範囲でカスタマイズいたします。まずはヒアリングの上、どこまで対応できるかご提案します。追加の機能開発は別途お見積もりとなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どんな業種に対応していますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "小売・製造・運送・整備・建設・士業など、事務作業のある業種全般に対応しています。輸出・貿易の書類作成のように、特定の業務に合わせた設計も行っています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "料金はいくらですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いまは実績づくりを兼ねたモニタープランとして、先着5社限定で30,000円（税込・固定）で承っています。請求・見積の自動化パッケージが対象です。モニター枠が埋まったあとは、業務内容に応じた個別のお見積りになります。くわしくは料金・プランページをご確認ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "追加で費用がかかることはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "納品後の追加カスタマイズ・機能追加、外部サービスとの連携、月額の保守サポートは別途お見積りです。後から追加費用が発生する場合は、必ず事前にご相談してから進めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "お支払いの方法とタイミングを教えてください。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "銀行振込で、納品完了後、請求書発行日より7日以内にお願いしています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "途中でキャンセルできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "制作・設定作業の着手後は、進捗状況に応じて発生した費用を差し引いた金額を返金いたします。既に納品済みの成果物および提供済みのサービスに関する料金は返金いたしかねます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "見積もりだけでも大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。「この作業ならいくらくらい？」というご質問だけでもお答えします。お見積りの前のご相談・ヒアリングは無料です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "納期はどれくらいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "お申し込みとヒアリングの完了後、おおむね3～4週間です。内容によって前後する場合は、着手前にお伝えします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何を用意すればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Googleアカウント（GoogleスプレッドシートとGASが使える状態）と、いま使っているファイルや帳票があれば十分です。業務の流れはヒアリングで伺います。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "依頼から納品までの流れを教えてください。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "１．無料相談、２．ヒアリング、３．お見積り（作業範囲・金額・スケジュール）、４．ご契約・着手、５．納品と操作説明、という順番です。開発に入る前に完成イメージをすり合わせます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "途中で仕様を変えられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "開発に入る前に完成イメージをすり合わせます。着手後の追加や変更は、内容によって別途お見積りになる場合があります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "データの安全性は大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Googleのセキュアな環境（スプレッドシート・GAS）内で完結するため、外部サーバーへのデータ送信はありません。アクセス権限もお客様自身で管理できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "納品後のサポートはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "使い方のサポートを含みます。納品後の追加改修・機能追加については別途ご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "会計ソフトなど他のシステムと連携できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "連携は内容により個別にお見積りします。まずは現在お使いのサービスを教えてください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "専用のアプリをインストールする必要がありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不要です。Googleアカウントがあれば、ブラウザからそのまま使えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "モニタープランとは何ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "本格展開の前に実績データを集めるための特別募集です。実績づくりを兼ねているため、通常より大幅に押えた30,000円（税込・固定）で承っています。先着5社限定です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "なぜこの価格なのですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yucky Design として外部のお客様に納品した実績が、これから積み上げていく段階だからです。その代わり、通常より低い価格で承っています。できること・できないことは正直にお伝えします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "モニターの条件はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "導入後に「どの作業がどれくらい楽になったか」を伺い、事例としてまとめさせていただくことを想定しています。実績掲載にご協力いただける方を優先しますが、社名非公開・顔出し不要でも構いません。掲載の可否は必ずご確認いただいたうえで決めます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "枠が埋まったらどうなりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先着5社の枠が埋まり次第、この特別価格でのご案内は終了します。それ以降のご依頼は、業務内容・規模に応じた個別お見積りとなります。"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
